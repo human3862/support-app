@@ -44,7 +44,7 @@ export const Footer: React.FC<FooterProps> = ({ data }) => {
             {state?.error && <p className="p-1 text-center text-red-500">{state.error}</p>}
           </div>
         </div>
-        <div className="bg-grey-black flex flex-col items-center justify-between p-[clamp(10px,3vw,30px)] px-[clamp(20px,10vw,400px)] md:flex-row">
+        <div className="bg-grey-black flex flex-col items-center justify-between p-[clamp(10px,3vw,31px)] px-[clamp(20px,10vw,400px)] md:flex-row">
           <div className="mb-8 flex items-center gap-4 md:mb-0">
             {logoData?.url && (
               <Image src={logoData.url} alt={logoData.alt || 'Logo'} height={40} width={30} />
