@@ -1,10 +1,9 @@
 {
-  "name": "",
+  "name": "support-app",
   "version": "1.0.0",
   "description": "A blank template to get started with Payload 3.0",
   "license": "MIT",
   "type": "module",
-  "dev": "next dev & payload generate:types --watch",
   "scripts": {
     "build": "payload migrate && cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build",
     "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
@@ -14,63 +13,54 @@
     "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
     "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
     "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
-    "test": "pnpm run test:int && pnpm run test:e2e",
-    "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --no-experimental-strip-types\" pnpm exec playwright test",
+    "test": "npm run test:int && npm run test:e2e",
+    "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --no-experimental-strip-types\" npx playwright test",
     "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
   },
   "dependencies": {
-    "@hookform/resolvers": "^5.2.2",
+    "@hookform/resolvers": "^4.1.0",
     "@payloadcms/db-postgres": "3.70.0",
     "@payloadcms/next": "3.70.0",
     "@payloadcms/richtext-lexical": "3.70.0",
-    "@payloadcms/storage-vercel-blob": "^3.71.1",
+    "@payloadcms/storage-vercel-blob": "3.70.0",
     "@payloadcms/ui": "3.70.0",
-    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/postcss": "^4.0.0",
     "cross-env": "^7.0.3",
     "dotenv": "16.4.7",
-    "framer-motion": "^12.26.2",
+    "framer-motion": "^12.0.0",
     "graphql": "^16.8.1",
-    "next": "15.4.10",
+    "next": "15.1.0",
     "payload": "3.70.0",
-    "react": "19.2.1",
-    "react-dom": "19.2.1",
-    "react-hook-form": "^7.71.1",
-    "sharp": "0.34.2",
-    "zod": "^4.3.5"
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-hook-form": "^7.54.0",
+    "sharp": "0.33.5",
+    "zod": "^3.24.0"
   },
   "devDependencies": {
-    "@playwright/test": "1.56.1",
-    "@testing-library/react": "16.3.0",
-    "@types/node": "^22.19.7",
-    "@types/react": "^19.2.1",
-    "@types/react-dom": "19.2.1",
-    "@vitejs/plugin-react": "4.5.2",
-    "autoprefixer": "^10.4.23",
+    "@playwright/test": "1.49.0",
+    "@testing-library/react": "16.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.16.0",
-    "eslint-config-next": "15.4.7",
-    "jsdom": "26.1.0",
-    "playwright": "1.56.1",
-    "playwright-core": "1.56.1",
-    "postcss": "^8.5.6",
+    "eslint-config-next": "15.1.0",
+    "jsdom": "25.0.1",
+    "playwright": "1.49.0",
+    "postcss": "^8.4.49",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.7.3",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^4.0.0",
+    "typescript": "5.7.2",
     "vite-tsconfig-paths": "5.1.4",
-    "vitest": "3.2.3"
+    "vitest": "2.1.8"
   },
   "engines": {
-    "node": "^18.20.2 || >=20.9.0",
-    "pnpm": "^9 || ^10"
+    "node": "^18.20.2 || >=20.9.0"
   },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "sharp",
-      "esbuild",
-      "unrs-resolver"
-    ],
-    "overrides": {
-      "payload": "3.0.0-rc.0"
-    }
+  "overrides": {
+    "payload": "3.70.0"
   }
 }
