@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles.css'
+import '../global.css'
 import { RenderBlocks } from '@/components/blocks/RenderBlocks'
 import config from '@payload-config'
 import { getPayload } from 'payload'

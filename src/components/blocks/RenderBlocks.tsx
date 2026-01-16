@@ -2,12 +2,14 @@ import React from 'react'
 import { Page } from '@/payload-types'
 import { MediaAndText } from './MediaAndText'
 import { Support } from './Support'
+import { PricingPlans } from './PricingPlans'
 
 type Block = NonNullable<Page['layout']>[number]
 
 const blockComponents: Record<string, React.FC<any>> = {
   mediaAndText: MediaAndText,
   supportBlock: Support,
+  pricingPlansBlock: PricingPlans,
 }
 
 export const RenderBlocks = ({ blocks }: { blocks: Block[] | null | undefined }) => {

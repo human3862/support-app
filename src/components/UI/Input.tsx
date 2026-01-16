@@ -12,5 +12,5 @@ export const Input: React.FC<inputProps> = ({ onClick, variant = `primary`, ...p
     secondary: ' bg-gray-700 text-white',
   }
   const className = `${baseStyle} ${variants[variant]}`
-  return <input type="email" className={className} onClick={onClick} {...props} />
+  return <input className={className} onClick={onClick} {...props} />
 }

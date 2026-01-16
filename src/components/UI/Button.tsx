@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   label?: string
   type?: 'button' | 'submit'
@@ -14,8 +16,9 @@ export const Button: React.FC<ButtonProps> = ({
   type = 'button',
   onClick,
   link,
+  ...props
 }) => {
-  const baseStyles = 'px-6 py-3 rounded-[10px] font-medium cursor-pointer inline-block'
+  const baseStyles = 'px-6 py-3  rounded-[10px] font-medium cursor-pointer inline-block '
   const variants = {
     primary: 'text-white bg-yellow-light',
     secondary: 'text-black bg-yellow-light',
@@ -26,14 +29,16 @@ export const Button: React.FC<ButtonProps> = ({
 
   if (link) {
     return (
-      <a className={className} href={link}>
-        {label}
-      </a>
+      <Link href={link}>
+        <button type={type} className={className} onClick={onClick} {...props}>
+          {label}
+        </button>
+      </Link>
     )
   }
 
   return (
-    <button type={type} className={className} onClick={onClick}>
+    <button type={type} className={className} onClick={onClick} {...props}>
       {label}
     </button>
   )

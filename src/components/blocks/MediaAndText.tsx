@@ -16,7 +16,7 @@ export const MediaAndText: React.FC<MediaAndTextData> = ({
   const imageData = typeof image === 'object' ? (image as Media) : null
 
   return (
-    <section className="px-[clamp(10px,8vw,250px)]">
+    <section className="mb-[clamp(20px,3vw,80px)] p-[clamp(30px,3vw,70px)] px-[clamp(10px,8vw,250px)]">
       <div className={`grid grid-cols-1 lg:grid-cols-2`}>
         <div
           className={`order-last flex flex-col items-start justify-center gap-[clamp(10px,4vw,32px)] ${isRight ? 'lg:order-first' : 'lg:order-last'}`}
@@ -41,6 +41,7 @@ export const MediaAndText: React.FC<MediaAndTextData> = ({
               return null
             })}
           </div>
+
           <div>
             {extraContent?.map((block, index) => {
               if (block.blockType === 'card') {
@@ -56,7 +57,8 @@ export const MediaAndText: React.FC<MediaAndTextData> = ({
               }
             })}
           </div>
-          <div className="flex gap-8">
+
+          <div className="flex flex-wrap gap-[clamp(12px,3vw,30px)]">
             {extraContent?.map((block, index) => {
               if (block.blockType === 'inputEmail') {
                 return (

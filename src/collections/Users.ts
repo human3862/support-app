@@ -5,9 +5,26 @@ export const Users: CollectionConfig = {
   admin: {
     useAsTitle: 'email',
   },
-  auth: true,
+  auth: {
+    tokenExpiration: 36000,
+    verify: false,
+    cookies: {
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'Lax',
+    },
+  },
   access: {
-    read: () => true,
+    read: ({ req: { user } }) => {
+      if (user?.role === 'admin') return true
+
+      if (user) {
+        return {
+          id: { equals: user.id },
+        }
+      }
+
+      return false
+    },
     create: () => true,
     update: ({ req: { user } }) => {
       if (user) return { id: { equals: user.id } }
@@ -31,6 +48,10 @@ export const Users: CollectionConfig = {
       type: 'select',
       options: ['admin', 'user'],
       defaultValue: 'user',
+      access: {
+        update: ({ req: { user } }) => user?.role === 'admin',
+        create: ({ req: { user } }) => user?.role === 'admin',
+      },
     },
   ],
 }

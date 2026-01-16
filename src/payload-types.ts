@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     pages: Page;
+    subscribers: Subscriber;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,6 +81,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
+    subscribers: SubscribersSelect<false> | SubscribersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -230,12 +232,41 @@ export interface Page {
             blockType: 'supportBlock';
           }
         | {
+            title: string;
+            plans?:
+              | {
+                  title: string;
+                  price: string;
+                  description?: string | null;
+                  items?:
+                    | {
+                        item?: string | null;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  button: {
+                    label?: string | null;
+                    link?: string | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'pricingPlansBlock';
           }
       )[]
     | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "subscribers".
+ */
+export interface Subscriber {
+  id: number;
+  email: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -274,6 +305,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'pages';
         value: number | Page;
+      } | null)
+    | ({
+        relationTo: 'subscribers';
+        value: number | Subscriber;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -428,10 +463,40 @@ export interface PagesSelect<T extends boolean = true> {
         pricingPlansBlock?:
           | T
           | {
+              title?: T;
+              plans?:
+                | T
+                | {
+                    title?: T;
+                    price?: T;
+                    description?: T;
+                    items?:
+                      | T
+                      | {
+                          item?: T;
+                          id?: T;
+                        };
+                    button?:
+                      | T
+                      | {
+                          label?: T;
+                          link?: T;
+                        };
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };
       };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "subscribers_select".
+ */
+export interface SubscribersSelect<T extends boolean = true> {
+  email?: T;
   updatedAt?: T;
   createdAt?: T;
 }

@@ -3,9 +3,7 @@ import '../global.css'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
 import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
 import { headers as getHeaders } from 'next/headers'
-
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
   title: 'Payload Blank Template',
@@ -14,23 +12,18 @@ export const metadata = {
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const { children } = props
   const payload = await getPayload({ config })
-  const headers = await getHeaders()
   const headerData = await payload.findGlobal({
     slug: 'header',
   })
-
-  const footerData = await payload.findGlobal({
-    slug: 'footer',
-  })
+  const headers = await getHeaders()
 
   const { user } = await payload.auth({ headers })
 
   return (
     <html lang="en">
       <body>
-        <Header data={headerData} user={user} />
+        <Header data={headerData} user={user} variant="onlyLogo" />
         <main>{children}</main>
-        <Footer data={footerData} />
       </body>
     </html>
   )
