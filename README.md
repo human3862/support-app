@@ -19,6 +19,27 @@
 
 </details>
 
+
+---
+
+
+## ⚡️ Performance (Lighthouse)
+
+Я уделил особое внимание оптимизации, чтобы лэндинг летал:
+- **Mobile:** 96 / 100
+- **Desktop:** 100 / 100
+
+<details>
+  <summary>Посмотреть  скриншоты (Lighthouse)</summary>
+  
+  **Mobile:**
+  <img width="1899" height="992" alt="image" src="https://github.com/user-attachments/assets/24bbffe2-b0e1-4a96-8879-babe3e4de32a" />
+
+  **Desktop:**
+  <img width="1919" height="991" alt="image" src="https://github.com/user-attachments/assets/d941ca45-74ee-4076-a7f9-9d7d47ed17bf" />
+
+</details>
+
 ---
 
 ## 🛠 Стек технологий
