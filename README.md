@@ -76,3 +76,18 @@
 1. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/human3862/StartupLand.git
+
+2. Установите зависимости:
+    ```bash
+    npm install
+   
+4.  Настройте окружение:
+    Создайте файл .env в корне проекта и добавьте ключи:
+     ```bash
+    DATABASE_URI=your_postgres_uri
+    PAYLOAD_SECRET=your_secret_key
+    TELEGRAM_BOT_TOKEN=your_bot_token
+    TELEGRAM_CHAT_ID=your_chat_id
+6. Запустите проект:
+     ```bash
+    npm run dev
