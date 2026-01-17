@@ -14,7 +14,7 @@ export const PricingPlans: React.FC<PricingPlansData> = ({ title, plans }) => {
   return (
     <section className="p-7">
       <div>
-        <h2 className="mb-22 text-center text-[clamp(21px,3vw,30px)] font-bold">{title}</h2>
+        <h2 className="mb-22 text-center text-[clamp(21px,3vw,31px)] font-bold">{title}</h2>
         {/* тарифы */}
         <div className="mb-12 flex items-start justify-center gap-4">
           {plans?.map((plan, index) => {
