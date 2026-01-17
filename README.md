@@ -8,15 +8,15 @@
 
 ## 📸 Скриншоты и Демо
 <!-- Место для главного скриншота или GIF-записи экрана -->
-!(<img width="1896" height="980" alt="image" src="https://github.com/user-attachments/assets/7ba3df9c-b304-4702-91e7-e7bdb260ea9f" />
-)
+<img width="1896" height="980" alt="image" src="https://github.com/user-attachments/assets/7ba3df9c-b304-4702-91e7-e7bdb260ea9f" />
+
 
 <details>
   <summary>Посмотреть еще скриншоты (Admin Panel)</summary>
   
   ### Панель управления Payload CMS
-  !(<img width="1917" height="989" alt="image" src="https://github.com/user-attachments/assets/8adc8cbd-7d34-4948-a2a1-05a315fc4c3b" />
-)
+  <img width="1917" height="989" alt="image" src="https://github.com/user-attachments/assets/8adc8cbd-7d34-4948-a2a1-05a315fc4c3b" />
+
 </details>
 
 ---
