@@ -1,7 +1,7 @@
 'use client'
 import { useActionState } from 'react'
 import { sendToTelegram } from '@/features/subscribe-by-email'
-import { Header as HeaderType, Media } from '@/shared/types/payload-types'
+import { Header as HeaderType, Media } from '@/payload-types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/shared/UI/Button'

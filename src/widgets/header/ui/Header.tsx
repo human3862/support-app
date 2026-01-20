@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import type { Header as HeaderType, Media } from '@/shared/types/payload-types'
-import type { User } from '@/shared/types/payload-types'
+import type { Header as HeaderType, Media } from '@/payload-types'
+import type { User } from '@/payload-types'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/shared/UI/Button'

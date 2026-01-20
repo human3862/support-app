@@ -25,7 +25,8 @@
       "@/features/*": ["./src/features/*"],
       "@/widgets/*": ["./src/widgets/*"],
       "@/shared/*": ["./src/shared/*"],
-      "@/screens/*": ["./src/screens/*"]
+      "@/screens/*": ["./src/screens/*"],
+      "@/payload-types": ["./payload/payload-types.ts"]
     },
     "target": "ES2022"
   },

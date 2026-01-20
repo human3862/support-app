@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import type { Page, Media } from '@/shared/types/payload-types'
+import type { Page, Media } from '@/payload-types'
 import { Button } from '@/shared/UI/Button'
 import { Input } from '@/shared/UI/Input'
 
