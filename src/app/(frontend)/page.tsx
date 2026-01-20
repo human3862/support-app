@@ -1,7 +1,7 @@
 import React from 'react'
 import { RenderBlocks } from '@/widgets/render-blocks/ui/RenderBlocks'
 import { getPayload } from 'payload'
-import config from '@/payload-config'
+import config from '@/payload/payload.config'
 import { notFound } from 'next/navigation'
 export const dynamic = 'force-dynamic'
 export default async function Page() {

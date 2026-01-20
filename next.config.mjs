@@ -1,19 +1,25 @@
 import { withPayload } from '@payloadcms/next/withPayload'
+import path from 'path'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (webpackConfig) => {
-    webpackConfig.resolve.extensionAlias = {
+  webpack: (config, { isServer: _isServer }) => {
+    config.resolve.alias['@payload-config'] = path.join(
+      process.cwd(),
+      'src/payload/payload.config.ts',
+    )
+
+    config.resolve.extensionAlias = {
       '.cjs': ['.cts', '.cjs'],
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
       '.mjs': ['.mts', '.mjs'],
     }
 
-    return webpackConfig
+    return config
   },
 }
 
 export default withPayload(nextConfig, {
   devBundleServerPackages: false,
-  configPath: './payload/payload.config.ts',
+  configPath: './src/payload/payload.config.ts',
 })

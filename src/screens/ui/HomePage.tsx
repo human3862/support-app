@@ -1,5 +1,5 @@
 import { RenderBlocks } from '@/widgets/render-blocks'
-import config from '@/payload-config'
+import config from '@/payload/payload.config'
 import { getPayload } from 'payload'
 import { notFound } from 'next/navigation'
 

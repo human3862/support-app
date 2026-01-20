@@ -20,13 +20,13 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/payload-config": ["./payload/payload.config.ts"],
+      "@/payload-config": ["./src/payload/payload.config.ts"],
       "@/entities/*": ["./src/entities/*"],
       "@/features/*": ["./src/features/*"],
       "@/widgets/*": ["./src/widgets/*"],
       "@/shared/*": ["./src/shared/*"],
       "@/screens/*": ["./src/screens/*"],
-      "@/payload-types": ["./payload/payload-types.ts"]
+      "@/payload-types": ["src/payload/payload-types.ts"]
     },
     "target": "ES2022"
   },

@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 import { getPayload } from 'payload'
 import { cookies } from 'next/headers'
 import { revalidatePath } from 'next/cache'
-import configPromise from '@/payload-config'
+import configPromise from '@/payload/payload.config'
 
 export type ActionState = {
   error?: string

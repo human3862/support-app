@@ -5,12 +5,12 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
 
-import { Users } from '../payload/collections/Users'
-import { Media } from '../payload/collections/Media'
-import { Pages } from '../payload/collections/Pages'
-import { Header } from '../payload/collections/Header'
-import { Footer } from '../payload/collections/Footer'
-import { Subscribers } from '../payload/collections/Subscribers'
+import { Users } from './collections/Users'
+import { Media } from './collections/Media'
+import { Pages } from './collections/Pages'
+import { Header } from './collections/Header'
+import { Footer } from './collections/Footer'
+import { Subscribers } from './collections/Subscribers'
 import { s3Storage } from '@payloadcms/storage-s3'
 
 const filename = fileURLToPath(import.meta.url)

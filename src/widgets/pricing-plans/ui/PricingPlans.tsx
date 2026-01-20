@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import type { Page } from '@/payload-types'
+import type { Page } from '@/payload/payload-types'
 import { Button } from '@/shared/UI/Button'
 import Image from 'next/image'
 

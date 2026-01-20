@@ -1,7 +1,7 @@
 'use server'
 
 import { getPayload } from 'payload'
-import config from '@/payload-config'
+import config from '@/payload/payload.config'
 import { headers as getHeaders } from 'next/headers'
 
 export async function fetchUser() {

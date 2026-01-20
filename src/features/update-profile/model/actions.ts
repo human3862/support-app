@@ -2,7 +2,7 @@
 
 import { getPayload } from 'payload'
 import { revalidatePath } from 'next/cache'
-import configPromise from '@/payload-config'
+import configPromise from '@/payload/payload.config'
 import { headers as getHeaders } from 'next/headers'
 
 export type ActionState = {
