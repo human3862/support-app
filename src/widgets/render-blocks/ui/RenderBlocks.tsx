@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page } from '@/shared/types/payload-types'
+import { Page } from '@/payload-types'
 import { MediaAndText } from '@/widgets/media-and-text'
 import { Support } from '@/widgets/support'
 import { PricingPlans } from '@/widgets/pricing-plans'
