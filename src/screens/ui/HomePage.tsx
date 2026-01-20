@@ -1,10 +1,9 @@
-import React from 'react'
-import { RenderBlocks } from '@/widgets/render-blocks/ui/RenderBlocks'
-import { getPayload } from 'payload'
+import { RenderBlocks } from '@/widgets/render-blocks'
 import config from '@/payload-config'
+import { getPayload } from 'payload'
 import { notFound } from 'next/navigation'
-export const dynamic = 'force-dynamic'
-export default async function Page() {
+
+export default async function HomePage() {
   const payload = await getPayload({ config })
 
   const result = await payload.find({
@@ -18,11 +17,9 @@ export default async function Page() {
 
   if (!page) return notFound()
 
-  const cleanBlocks = JSON.parse(JSON.stringify(page.layout || []))
-
   return (
     <>
-      <RenderBlocks blocks={cleanBlocks} />
+      <RenderBlocks blocks={page.layout || []} />
     </>
   )
 }

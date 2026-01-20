@@ -1,0 +1,1 @@
+export { upDateProfileAction } from './actions'
