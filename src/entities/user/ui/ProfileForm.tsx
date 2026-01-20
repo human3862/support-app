@@ -5,7 +5,7 @@ import { useState, useActionState } from 'react'
 import { Input } from '@/shared/UI/Input'
 import { Button } from '@/shared/UI/Button'
 import { upDateProfileAction } from '@/features/update-profile'
-import type { User, Media } from '@/shared/types/payload-types'
+import type { User, Media } from '@/payload-types'
 import Image from 'next/image'
 
 export const ProfileForm = ({ user }: { user: User }) => {
